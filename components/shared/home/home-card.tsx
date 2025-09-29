@@ -1,5 +1,5 @@
 import {Card, CardContent, CardFooter} from "@/components/ui/card";
-import {Link} from "lucide-react";
+import Link from "next/link";
 import Image from "next/image";
 
 
@@ -33,7 +33,7 @@ export function HomeCard({cards}: { cards: CardItem[] }) {
                                         alt={item.name}
                                         width={120}
                                         height={120}
-                                        className="aspect-square object-scale-down max-w-full h-auto max-auto"
+                                        className="aspect-square object-scale-down max-w-full h-auto mx-auto"
                                     />
                                     <p className="text-sm text-center whitespace-nowrap overflow-hidden text-ellipsis">
                                         {item.name}
@@ -46,7 +46,7 @@ export function HomeCard({cards}: { cards: CardItem[] }) {
                     {card.link && (
                         <CardFooter>
                             <Link href={card.link.href} className='mt-4 block'>
-                                {card.link.href}
+                                {card.link.text}
                             </Link>
                         </CardFooter>
                     )}
